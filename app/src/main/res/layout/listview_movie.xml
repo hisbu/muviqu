@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/img_poster"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/poster_jason_bourne"
+        android:contentDescription="@string/image_movie"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/img_poster"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/sample_jason_bourne"
+        />
+
+    <TextView
+        android:id="@+id/tv_year"
+        style="@style/TitleListItem"
+        android:layout_below="@id/tv_title"
+        android:layout_toEndOf="@id/img_poster"
+        android:ellipsize="end"
+        android:text="@string/sample_2016"/>
+
+    <TextView
+        android:id="@+id/tv_genre"
+        style="@style/TitleListItem"
+        android:layout_below="@id/tv_year"
+        android:layout_toEndOf="@id/img_poster"
+        android:textStyle="italic"
+        android:text="@string/sample_action_crime"/>
+
+    <TextView
+        android:id="@+id/tv_runtime"
+        style="@style/TitleListItem"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textColor="#FFF"
+        android:layout_below="@id/tv_genre"
+        android:layout_toEndOf="@id/img_poster"
+        android:background="@drawable/shape_background_runtime"
+        android:text="@string/sample_120m"
+        />
+
+        <!--<RatingBar-->
+            <!--android:id="@+id/rl_list_rating"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--style="@style/ImageRatingBar"-->
+            <!--android:numStars="5"-->
+            <!--android:stepSize="1"-->
+            <!--android:layout_toEndOf="@id/img_poster"-->
+            <!--android:layout_marginStart="20dp"-->
+            <!--android:layout_marginTop="6dp"-->
+            <!--android:layout_below="@id/tv_runtime" />-->
+
+        <RelativeLayout
+            android:id="@+id/rl_list_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_poster"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/tv_runtime">
+
+            <ImageView
+                android:id="@+id/img_star1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/rating_icon"
+                android:contentDescription="@string/image_movie"/>
+
+            <ImageView
+                android:id="@+id/img_star2"
+                style="@style/StyleListStar"
+                android:src="@drawable/rating_icon"
+                android:layout_toEndOf="@+id/img_star1"
+                android:contentDescription="@string/image_movie"/>
+
+            <ImageView
+                android:id="@+id/img_star3"
+                style="@style/StyleListStar"
+                android:src="@drawable/rating_icon"
+                android:layout_toEndOf="@+id/img_star2"
+                android:contentDescription="@string/image_movie"/>
+
+            <ImageView
+                android:id="@+id/img_star4"
+                style="@style/StyleListStar"
+                android:src="@drawable/rating_icon"
+                android:layout_toEndOf="@+id/img_star3"
+                android:contentDescription="@string/image_movie"/>
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_rating"
+        style="@style/TitleListItem"
+        android:layout_below="@id/tv_runtime"
+        android:layout_toEndOf="@id/rl_list_rating"
+        android:text="@string/sample_7_8"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tv_rating"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:text="@string/sample_10"
+        android:layout_below="@id/tv_runtime"
+        />
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="top"
+    android:id="@+id/detail_movie"
+    android:background="#FFFFFF"
+    tools:context=".DetailMovieActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="550dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/poster_detail_margin_right"
+            android:layout_marginTop="@dimen/poster_detail_margin_top"
+            android:scaleType="centerCrop"
+            android:rotation="-3"
+            android:contentDescription="@string/image_movie"
+            android:src="@drawable/shape_background_detail"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_poster"
+            android:layout_width="350dp"
+            android:layout_height="550dp"
+            android:layout_marginEnd="-34dp"
+            android:layout_marginTop="@dimen/poster_detail_margin_top"
+            android:layout_alignParentEnd="true"
+            android:rotation="-7"
+            app:cardCornerRadius="18dp"
+            >
+
+            <ImageView
+                android:id="@+id/img_detail_poster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/image_movie"
+                android:src="@drawable/poster_jason_bourne"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_view_poster"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textAlignment="textEnd"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="@string/sample_jason_bourne"
+            />
+
+        <TextView
+            android:id="@+id/tv_detail_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_detail_title"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textAlignment="textEnd"
+            android:text="@string/sample_2016"
+            />
+
+
+
+        <!--<RelativeLayout-->
+            <!---->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+            <!--android:layout_marginRight="@dimen/activity_horizontal_margin"-->
+            <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+            <!--android:layout_below="@id/tv_detail_year">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/img_star1"-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:src="@drawable/rating_icon"-->
+                <!--android:contentDescription="@string/image_movie"/>-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/img_star2"-->
+                <!--style="@style/StyleStar"-->
+                <!--android:src="@drawable/rating_icon"-->
+                <!--android:layout_toEndOf="@+id/img_star1"-->
+                <!--android:contentDescription="@string/image_movie"/>-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/img_star3"-->
+                <!--style="@style/StyleStar"-->
+                <!--android:src="@drawable/rating_icon"-->
+                <!--android:layout_toEndOf="@+id/img_star2"-->
+                <!--android:contentDescription="@string/image_movie"/>-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/img_star4"-->
+                <!--style="@style/StyleStar"-->
+                <!--android:src="@drawable/rating_icon"-->
+                <!--android:layout_toEndOf="@+id/img_star3"-->
+                <!--android:contentDescription="@string/image_movie"/>-->
+        <!--</RelativeLayout>-->
+        <RatingBar
+            android:id="@+id/rl_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ImageRatingBar"
+            android:numStars="5"
+            android:stepSize="1"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_below="@id/tv_detail_year" />
+
+        <TextView
+            android:id="@+id/tv_detail_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_below="@id/rl_rating"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/sample_7_8"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/tv_detail_rating"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:text="@string/sample_10"
+            android:layout_below="@id/rl_rating"
+            />
+
+        <TextView
+            android:id="@+id/tv_detail_runtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_detail_rating"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_background_runtime"
+            android:textColor="#FFF"
+            android:text="@string/sample_120m"/>
+
+        <TextView
+            android:id="@+id/tv_detail_genre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_detail_runtime"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:text="@string/sample_action_crime"/>
+
+        <TextView
+            android:id="@+id/tv_detail_overview_title"
+            style="@style/TitleContent"
+            android:layout_below="@+id/tv_detail_genre"
+            android:text="@string/detail_overview"/>
+
+        <TextView
+            android:id="@+id/tv_detail_overview"
+            style="@style/TextContent"
+            android:layout_below="@id/tv_detail_overview_title"
+            android:text="@string/sample_overview"/>
+
+        <TextView
+            android:id="@+id/tv_detail_director_title"
+            style="@style/TitleContent"
+            android:layout_below="@+id/tv_detail_overview"
+            android:text="@string/detail_director"/>
+
+        <TextView
+            android:id="@+id/tv_detail_director"
+            style="@style/TextContent"
+            android:layout_below="@id/tv_detail_director_title"
+            android:text="@string/sample_paul_greengrass"/>
+
+        <TextView
+            android:id="@+id/tv_detail_cast_title"
+            style="@style/TitleContent"
+            android:layout_below="@id/tv_detail_director"
+            android:text="@string/detail_cast"/>
+
+        <TextView
+            android:id="@+id/tv_detail_cast"
+            style="@style/TextContent"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_below="@+id/tv_detail_cast_title"
+            android:text="@string/sample_cast"/>
+
+    </RelativeLayout>
+</ScrollView>
